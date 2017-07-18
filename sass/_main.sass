@@ -1,0 +1,128 @@
+
+/*  FONTS */
+/* ================================================ */
+
+@font-face
+    font-family: "AllerRegular"
+    src : url("../fonts/Aller_Rg.ttf")
+
+
+/* MAIN ================== */
+
+$gutter: 10
+$columns: 12
+
+.container
+	margin-left: auto
+	margin-right: auto
+	padding-left: $gutter + px
+	padding-right: $gutter + px
+	// border: 1px solid red
+	.row
+		margin-left: -$gutter + px
+		margin-right: -$gutter + px
+		+clr
+		&>[class*="col-"]
+			position: relative
+			min-height: 1px
+			float: left
+			padding-left: $gutter + px
+			padding-right: $gutter + px
+			
+@for $i from 1 through $columns
+	.col-#{$i}
+		width: ((100 / $columns) * $i) * 1%
+		
+.text-left
+	text-align: left !important
+
+.text-right
+	text-align: right !important
+
+
+/*  ICONS ================== */
+.ic 
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	background: $icons no-repeat
+
+
+@each $i in next, prev
+	.ic--#{$i}
+		+s(ic--#{$i})
+
+
+/* BUTTON ================== */
+
+
+.btn, a.btn 
+	display: inline-block
+	vertical-align: middle
+	text-align: center
+	padding: 10px 20px 0
+	height: 40px
+	font: normal 14px/14px Arial, sans-serif
+	+tr(all 0.2s linear)
+	border-radius: 5px
+	background: transparent
+	border: none 
+
+input[type="submit"].btn, button.btn
+	padding-top: 0
+
+
+/*  FORM ================== */
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="email"],
+textarea
+	height: 40px
+	padding: 0 15px
+	font: normal 14px/14px Arial, sans-serif
+	color: #000
+	background: #fff 
+	border: 1px solid #ccc
+	&.form-control
+		display: block
+		width: 100%
+
+textarea
+	resize: none 
+	height: auto
+	min-height: 100px
+	padding-top: 10px
+
+label 
+	display: block
+
+
+/*  HEADER ================== */
+
+
+
+/*  CONTENT ================== */
+
+
+
+	
+
+/*  FOOTER ================== */
+
+
+
+/*  MEDIA ================== */
+
+
+
+
+@media ( max-width: 1200px)
+@media ( max-width: 992px) 
+@media (max-width: 768px) 
+@media (max-width: 640px) 
+@media (max-width: 480px) 
+
+
+
